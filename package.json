@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.13.2"
+    "limby-resize": "0.0.8",
+    "react": "^0.13.2",
+    "rx": "^2.5.2"
   },
   "devDependencies": {
     "babel": "^5.1.11",
