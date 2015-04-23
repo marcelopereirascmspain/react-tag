@@ -1,4 +1,4 @@
 import React from "react";
-import Component from "../src/index";
+import MyComponent from "../src/MyComponent";
 
-React.render(<Component />, document.body);
+React.render(<MyComponent />, document.getElementById("main"));
