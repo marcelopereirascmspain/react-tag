@@ -1,4 +1,4 @@
 import React from "react";
-import MyComponent from "../src/MyComponent";
+import Tag from "../src/index";
 
-React.render(<MyComponent />, document.getElementById("main"));
+React.render(<Tag text="this is a tag" />, document.getElementById("main"));
