@@ -6,7 +6,7 @@
 
 ## Running
 
-`npm run dev`
+`npm start`
 
 http://localhost:8080/docs
 
