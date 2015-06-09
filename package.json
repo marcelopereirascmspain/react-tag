@@ -1,12 +1,14 @@
 {
   "name": "@schibstedspain/react-tag",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server -d --colors --inline",
     "lint": "jscs src/ && eslint src/",
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --compilers js:babel/register",
+    "dist": "babel src --out-dir dist",
+    "prepublish": "npm run dist"
   },
   "author": "marcelo.pereira@scmspain.com",
   "license": "ISC",
