@@ -3,19 +3,19 @@ import Tag from "../src/index";
 
 var segundamanoTagTheme = {
   tag: {
-    backgroundColor: "#f90"
+    backgroundColor: "#3498db"
   },
   tag__tip: {
-    borderRightColor: "#f90"
+    borderRightColor: "#3498db"
   }
 };
 
 var successTagTheme = {
   tag: {
-    backgroundColor: "green"
+    backgroundColor: "#2ecc71"
   },
   tag__tip: {
-    borderRightColor: "green"
+    borderRightColor: "#2ecc71"
   }
 };
 
@@ -31,9 +31,20 @@ class Docs extends React.Component {
   render() {
     return (
       <div>
-        <Tag text="this is a default tag" />
-        <SuccessTag text="this is a wrapped tag with a default theme" />
-        <Tag text="this is a tag with an overriden theme" theme={segundamanoTagTheme} />
+        <section>
+          <h1>Default</h1>
+          <p><Tag text="default" /></p>
+        </section>
+        <section>
+          <h1>Themed</h1>
+          <p>You can wrap the tag component and use it with your own theme</p>
+          <p><SuccessTag text="themed" /></p>
+        </section>
+        <section>
+          <h1>Overriden</h1>
+          <p>You can pass a <code>theme</code> prop to a specific tag to override its styles</p>
+          <p><Tag text="overriden" theme={segundamanoTagTheme} /></p>
+        </section>
       </div>
     )
   }

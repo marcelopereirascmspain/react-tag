@@ -1,9 +1,21 @@
 import expect from "expect";
-import MyComponent from "../src/MyComponent";
+import React from "react/addons";
+import Tag from "../src/index";
 
-describe("my component", () => {
-  it("should do something super cool", () => {
-    expect(true).toBe(true);
+describe("Tag", () => {
+  it("should render the text", () => {
+    const tag = React.renderToStaticMarkup(
+      <Tag text="nyancat" />
+    );
+
+    expect(/nyancat/.test(tag)).toBe(true);
+  });
+
+  it("should support theming", () => {
+    const tag = React.renderToStaticMarkup(
+      <Tag text="Hello" theme={{tag: {backgroundColor: "#d45732"}}} />
+    );
+
+    expect(/background-color:#d45732/.test(tag)).toBe(true);
   });
 });
-

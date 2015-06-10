@@ -1,20 +1,35 @@
 import React from "react";
 import merge from "lodash/object/merge";
 
-const backgroundColor = "#aaa";
+const backgroundColor = "#bdc3c7";
+const textColor = "#fff";
+const textSize = 12;
 const tipWidth = 12;
+const padding = 9;
 
 const styles = {
   tag: {
-    backgroundColor: backgroundColor,
-    color: "#fff",
-    padding: 9,
-    paddingRight: 32,
+    fontSize: textSize,
     lineHeight: 1,
-    fontSize: 12,
-    borderRadius: "0 2px 2px 0",
+    padding: padding,
+    paddingLeft: 14,
+    paddingRight: 28,
+    marginLeft: tipWidth,
     position: "relative",
-    marginLeft: tipWidth
+    borderRadius: "0 2px 2px 0",
+    backgroundColor: backgroundColor,
+    color: textColor,
+  },
+  tag__hole: {
+    width: 4,
+    height: 4,
+    borderRadius: 4,
+    display: "block",
+    position: "absolute",
+    zIndex: 1,
+    backgroundColor: "#fff",
+    left: 0,
+    top: 14
   },
   tag__tip: {
     border: "16px solid transparent",
@@ -28,11 +43,12 @@ const styles = {
     top: 0
   },
   tag__remove: {
+    lineHeight: 1,
+    fontSize: textSize,
     border: 0,
-    color: "#fff",
+    color: textColor,
     backgroundColor: "transparent",
-    padding: 8,
-    fontSize: 12,
+    padding: padding,
     position: "absolute",
     top: 0,
     right: 0,
@@ -47,6 +63,7 @@ export default React.createClass({
     return (
       <span className="schibsted-tag" style={styles.tag}>
         <span style={styles.tag__tip}></span>
+        <span style={styles.tag__hole}></span>
         {this.props.text}
         <button className="schibsted-tag__remove" style={styles.tag__remove}>&times;</button>
       </span>
